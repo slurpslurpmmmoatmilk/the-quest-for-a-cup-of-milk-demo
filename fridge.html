@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="home.css" media="screen">
+	<title> The Quest for a Cup of Milk </title>
+	<link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body class="fridge">
+<script src="fridge.js"></script>
+
+
+<!-- this filter makes everything EVIL -->
+<img src="evil-filter.png" style="visibility:hidden" id="evil-filter">
+
+<!-- fades the background when menu is opened -->
+<img src="greyout.png" style="visibility:hidden" id="greyout">
+
+<!-- menu button -->
+<div>
+<button id="mainMenu" onclick="openmenu()" class="mainMenu">
+<img src="icon.png">
+</button>
+</div>
+
+
+<!-- this is where the textbox and choices are stored.-->
+<footer>
+<div class ="alltext">
+
+<!-- popup window when the menu button is pressed -->
+<div id ="menuwindow" class="windows" style="display:none" draggable="true">
+	<div id ="menutopbar" class="topbar"> <p class="file"> C:\Users\Wigglems\Desktop\return.exe </p>
+		<button id="closemenu" onclick="closemenu()" class="close" style="font-weight:900">x</button>
+	</div>
+	<p>Return to the main menu?</p>
+	<p>All progress will be lost.</p>
+	<div class="menu-buttons">
+	<button id="menuYes" style="display:grid" onclick="menuYes()" class="commence">
+	<a href="menu.html"> Yes </a>
+	</button>
+	<button id="menuCancel" style="display:grid" onclick="closemenu()" class="commence">
+	<p> Cancel </p>
+	</button>
+	</div>
+</div>
+
+
+<!-- popup window to finish the demo -->
+<div id ="finishwindow" class="windows" style="display:none" draggable="true">
+	<div id ="finishtopbar" class="topbar"> <p class="file"> C:\Users\Wigglems\Desktop\completion.txt </p>
+		<button id="closefinish" onclick="closefinish()" class="close" style="font-weight:900">x</button>
+	</div>
+	<p>Congrats! You finished the demo!</p>
+	<p>Enjoy the mesmerising spin of the fish while you revel in your accomplishment.</p>
+	<img src="fish-spin.gif">
+	<div class="menu-buttons">
+	<button id="return" style="display:grid" onclick="return()" class="commence">
+	<a href="menu.html"> Return to menu</a>
+	</button>
+	</div>
+</div>
+
+
+<!-- the many choices -->
+<button id="choice1" onclick="choice1()" class="choices">Open the fridge</button>
+<button id="choice2" onclick="choice2()" style="display:none" class="choices">Check the fridge</button>
+<button id="choice3" onclick="choice3()" style="display:none" class="choices">Check your pants</button>
+<button id="choice4" onclick="choice4()" style="display:none" class="choices">Check your purse</button>
+<button id="choice5" onclick="choice5()" style="display:none" class="choices">Check your wallet</button>
+<button id="choice6" onclick="continue6()" style="display:none" class="choices">Oh okay</button>
+<button id="choice7" onclick="choice7()" style="display:none" class="choices">So that's where I put it...</button>
+<button id="choice8" onclick="choice8()" style="display:none" class="special">Give up</button>
+<button id="choice9" onclick="choice9()" style="display:none" class="choices">It's over now?</button>
+<button id="choice10" onclick="choice10()" style="display:none" class="choices">No more looks places?</button>
+<button id="choice11" onclick="choice11()" style="display:none" class="choices">I guess so</button>
+<button id="choice12" onclick="choice12()" style="display:none" class="choices">No not really</button>
+<button id="choice13" onclick="choice13()" style="display:none" class="choices">There's a cafeteria?</button>
+<button id="choice14" onclick="choice14()" style="display:none" class="choices">what</button>
+<button id="choice15" onclick="choice15()" style="display:none" class="choices">I think so</button>
+<button id="choice16" onclick="choice16()" style="display:none" class="choices">No</button>
+<button id="choice17" onclick="choice17()" style="display:none" class="choices">:(</button>
+<button id="finish" onclick="finish()" style="display:none" class="special">Go to work</button>
+
+
+<!-- these buttons will change to the next dialogue option -->
+<div class="click-to-continue">
+	<button id="continue1" onclick="continue1()" class="continue"disabled>click to continue</button>
+	<button id="continue2" onclick="continue2()" class="continue"disabled>click to continue</button>
+	<button id="continue3" onclick="continue3()" class="continue"disabled>click to continue</button>
+	<button id="continue4" onclick="continue4()" class="continue"disabled>click to continue</button>
+	<button id="continue5" onclick="continue5()" class="continue"disabled>click to continue</button>
+	<button id="continue6" onclick="continue6()" class="continue"disabled>click to continue</button>
+	<button id="continue7" onclick="continue7()" class="continue"disabled>click to continue</button>
+</div>
+
+
+<!-- where all dialogue and narration will be displayed -->
+<div class="textbox">
+	<p id="text"> You find your sleek, magnetic fridge covered in crayon drawings that you don’t remember putting there. Despite your fridge being magnetic, the drawings are all held in place by peeling, fuzzy tape, just like your hopes and dreams. You are now one more step closer to fulfilling your heart’s desire. </p>
+</div>
+
+</div> <!-- closing .alltext -->
+</footer>
+</body>
+</html>

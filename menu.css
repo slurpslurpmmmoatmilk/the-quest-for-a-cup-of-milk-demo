@@ -1,0 +1,253 @@
+/* menu layout */
+
+
+/* i drew this using the trackpad no it is no a photo */
+body {
+	margin: 0px;
+	background-image: url(menu-body.png);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+/* i can do invidual formatting for each textbox now */
+p {
+	padding: 0px;
+	margin: 0px;
+}
+
+/* this includes everything aside from the popup windows */
+.main {
+	display: grid;
+	margin: auto;
+}
+
+/* title card, displayed in the best typeface */
+.title {
+	image-rendering: pixelated;
+	margin: auto;
+	margin-top: 30px;
+}
+
+/* the lil guy that does the lil blink */
+.pillah {
+	margin: auto;
+	margin-bottom: 20px;
+	border: 1px solid black;
+	border-radius: 7px;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				1px 0px 5px inset skyblue,
+				-1px 0px 5px inset skyblue,
+				0px 1px 5px inset skyblue,
+				0px -1px 5px inset skyblue,
+				0px -20px 40px inset rgba(0, 255, 255, 1),
+				0px -20px 50px inset rgba(0, 0, 70, 0.5),
+				0px -100px 2px inset rgba(0, 50, 180, 0.4);
+		background: rgba(0, 160, 220, 0.7);
+}
+
+/* start, options, credits, mystery */
+.buttons {
+	color: white;
+	background: rgba(0, 130, 180, 0.7);
+	width: 300px;
+	height: 50px;
+	margin: auto;
+	margin-bottom: 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding-bottom: 2px;
+	font-family: cursive;
+	font-size: 15px;
+	text-align: center;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				1px 0px 5px inset skyblue,
+				-1px 0px 5px inset skyblue,
+				0px 1px 5px inset skyblue,
+				0px -1px 5px inset skyblue,
+				0px -10px 15px inset rgba(0, 200, 230, 0.7),
+				0px -10px 30px inset rgba(0, 0, 70, 0.5),
+				0px -25px 2px inset rgba(0, 20, 130, 0.4);
+}
+
+/* advanced hover animation for funsies */
+.buttons:hover {
+	animation: buttons-hover .3s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes buttons-hover {
+	0% {
+		box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				1px 0px 5px inset skyblue,
+				-1px 0px 5px inset skyblue,
+				0px 1px 5px inset skyblue,
+				0px -1px 5px inset skyblue,
+				0px -10px 15px inset rgba(0, 200, 230, 0.7),
+				0px -10px 30px inset rgba(0, 0, 70, 0.5),
+				0px -25px 2px inset rgba(0, 20, 130, 0.4);
+		background: rgba(0, 130, 180, 0.7);
+		width: 300px;
+		height: 50px;
+		margin-bottom: 15px;
+		font-size: 15px;
+	}
+	50% {
+		box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				1px 0px 5px inset skyblue,
+				-1px 0px 5px inset skyblue,
+				0px 1px 5px inset skyblue,
+				0px -1px 5px inset skyblue,
+				0px -10px 15px inset rgba(0, 255, 255, 1),
+				0px -10px 30px inset rgba(0, 0, 70, 0.5),
+				0px -25px 2px inset rgba(0, 20, 130, 0.4),
+				0px 0px 10px white;
+		background: rgba(0, 200, 220, 0.7);
+		width: 305px;
+		height: 52.5px;
+		margin-bottom: 12.5px;
+		font-size: 15.5px;
+		text-shadow: 0px 0px 5px lightcyan;
+	}
+	100% {
+		box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				1px 0px 5px inset skyblue,
+				-1px 0px 5px inset skyblue,
+				0px 1px 5px inset skyblue,
+				0px -1px 5px inset skyblue,
+				0px -10px 15px inset rgba(0, 255, 255, 1),
+				0px -10px 30px inset rgba(0, 0, 70, 0.5),
+				0px -25px 2px inset rgba(0, 20, 130, 0.4),
+				0px 0px 10px white;
+		background: rgba(0, 200, 220, 0.7);
+		width: 310px;
+		height: 55px;
+		margin-bottom: 10px;
+		font-size: 16px;
+		text-shadow: 0px 0px 5px lightcyan;
+	}
+}
+
+/* the popups that appear after a button is pressed */
+.windows {
+	background: white;
+	width: 700px;
+	height: auto;
+	margin: auto;
+	border: 1px solid;
+	padding-bottom: 20px;
+	margin-top: 300px;
+	box-shadow: 0px 5px 20px black;
+	font-family: cursive;
+	p {
+		margin-left: 10px;
+	}
+}
+
+/* blue bar at the top of the popup containing the fake file name and close button */
+.topbar {
+	display: grid;
+	width: auto;
+	grid-template-columns: auto auto;
+	height: 25px;
+	padding-top: 0px;
+	border-bottom: 1px solid black;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset skyblue,
+				-.5px 0px 2px inset skyblue,
+				0px .5px 2px inset skyblue,
+				0px -.5px 2px inset skyblue,
+				0px -10px 20px inset rgba(180, 255, 255, .7),
+				0px 5px 10px darkgrey;
+	background-image: linear-gradient(70deg, blue, royalblue, blue, dodgerblue, royalblue, dodgerblue);
+}
+
+/* fake file name on the topbar of the popups */
+.file {
+	color: white;
+	font-family: cursive;
+	font-size: 13px;
+	margin-left: 7px;
+	margin-top: 3px;
+}
+
+/* to close the popups */
+.close {
+	width: 50px;
+	height: 25px;
+	background: lightcoral;
+	color: white;
+	justify-self: right;
+	font-size: 15px;
+	font-family: cursive;
+	border: transparent;
+	border-left: 1px solid black;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset bisque,
+				-.5px 0px 2px inset bisque,
+				0px .5px 2px inset bisque,
+				0px -.5px 2px inset bisque,
+				0px -10px 15px inset sandybrown,
+				0px -10px 1px inset crimson;
+}
+
+.close:hover {
+	background: lightsalmon;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset bisque,
+				-.5px 0px 2px inset bisque,
+				0px .5px 2px inset bisque,
+				0px -.5px 2px inset bisque,
+				0px -10px 15px inset orange,
+				0px -10px 10px inset yellow,
+				0px -10px 1px inset crimson;
+}
+
+/* buttons that link to the start of the game */
+.commence {
+	width: 100px;
+	font-family: cursive;
+	font-size: 15px;
+	a {
+		color: black;
+		text-decoration-color: transparent;
+	}
+	background-color: gainsboro;
+	border: 1px solid black;
+	border-radius: 2px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+.commence:hover {
+	background: darkgrey;
+}
+
+.commence-buttons {
+	display: flex;
+}

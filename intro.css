@@ -1,0 +1,390 @@
+/*im mclovin it*/
+
+
+/* the background, drawn by yours truly */
+body {
+	margin: 0px;
+	background-image: url(intro-body.png);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+
+/* so i can add unique padding to each body of text later*/
+p {
+	padding: 0px;
+	margin: 0px;
+}
+
+.mainMenu, .mainMenu:disabled {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	display: flex;
+	margin-top: 15px;
+	margin-left: 15px;
+	border: 1px solid black;
+	border-radius: 7px;
+	background: goldenrod;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset lemonchiffon,
+				-.5px 0px 2px inset lemonchiffon,
+				0px .5px 2px inset lemonchiffon,
+				0px -.5px 2px inset lemonchiffon,
+				0px -10px 15px inset sandybrown,
+				0px -10px 1px inset sienna;
+	img {
+		margin: auto;
+		width: 40px;
+	}
+}
+
+.mainMenu:hover {
+	cursor: pointer;
+	background: goldenrod;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset lemonchiffon,
+				-.5px 0px 2px inset lemonchiffon,
+				0px .5px 2px inset lemonchiffon,
+				0px -.5px 2px inset lemonchiffon,
+				0px -10px 15px inset yellow,
+				0px -10px 1px inset sienna;
+	img {
+		filter: brightness(120%);
+	}
+}
+
+.mainMenu:active {
+	cursor: pointer;
+	background: goldenrod;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset lemonchiffon,
+				-.5px 0px 2px inset lemonchiffon,
+				0px .5px 2px inset lemonchiffon,
+				0px -.5px 2px inset lemonchiffon,
+				0px -10px 15px inset yellow,
+				0px -10px 1px inset sienna,
+				0px 0px 7px yellow;
+	img {
+		filter: brightness(120%);
+	}
+}
+
+/* the popup that appears when the menu button is pressed */
+.windows {
+	background: white;
+	width: 700px;
+	height: auto;
+	margin: auto;
+	border: 1px solid;
+	padding-bottom: 20px;
+	margin-bottom: 300px;
+	box-shadow: 0px 5px 20px black;
+	font-family: cursive;
+	display: grid;
+	p {
+		margin-left: 10px;
+	}
+}
+
+/* blue bar at the top of the popup containing the fake file name and close button */
+.topbar {
+	display: grid;
+	width: auto;
+	grid-template-columns: auto auto;
+	height: 25px;
+	padding-top: 0px;
+	border-bottom: 1px solid black;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset skyblue,
+				-.5px 0px 2px inset skyblue,
+				0px .5px 2px inset skyblue,
+				0px -.5px 2px inset skyblue,
+				0px -10px 20px inset rgba(180, 255, 255, .7),
+				0px 5px 10px darkgrey;
+	background-image: linear-gradient(70deg, blue, royalblue, blue, dodgerblue, royalblue, dodgerblue);
+}
+
+/* fake file name on the topbar of the popups */
+.file {
+	color: white;
+	font-family: cursive;
+	font-size: 13px;
+	margin-left: 7px;
+	margin-top: 3px;
+}
+
+/* to close the popups */
+.close {
+	width: 50px;
+	height: 25px;
+	background: lightcoral;
+	color: white;
+	justify-self: right;
+	font-size: 15px;
+	font-family: cursive;
+	border: transparent;
+	border-left: 1px solid black;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset bisque,
+				-.5px 0px 2px inset bisque,
+				0px .5px 2px inset bisque,
+				0px -.5px 2px inset bisque,
+				0px -10px 15px inset sandybrown,
+				0px -10px 1px inset crimson;
+}
+
+.close:hover {
+	background: lightsalmon;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset bisque,
+				-.5px 0px 2px inset bisque,
+				0px .5px 2px inset bisque,
+				0px -.5px 2px inset bisque,
+				0px -10px 15px inset orange,
+				0px -10px 10px inset yellow,
+				0px -10px 1px inset crimson;
+}
+
+/* yes or cancel buttons in menu */
+.commence {
+	width: 100px;
+	font-family: cursive;
+	font-size: 15px;
+	a {
+		color: black;
+		text-decoration-color: transparent;
+	}
+	background-color: gainsboro;
+	border: 1px solid black;
+	border-radius: 2px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+.commence:hover {
+	background: darkgrey;
+}
+
+.menu-buttons {
+	display: flex;
+}
+
+
+/* the filter for when everything needs to be EVIL */
+#evil-filter {
+	position: fixed;
+	mix-blend-mode: color-burn;
+	margin: 0px;
+	top: 0;
+}
+
+#greyout {
+	position: fixed;
+	opacity: 50%;
+	margin: 0px;
+	top: 0;
+}
+
+/* makes certain text stand out even more */
+b {
+	color: red;
+}
+
+strong {
+	color: cyan;
+	text-shadow: 0px 0px 4px darkturquoise;
+}
+
+.main {
+	min-height: 200px;
+}
+
+/* simulated slideshow */
+.visuals {
+	display: grid;
+	margin: auto;
+}
+
+#intro1 {
+	margin-top: 200px;
+	width: 30%;
+}
+
+#intro2 {
+	margin-top: 150px;
+	width: 20%;
+}
+
+#intro3 {
+	margin-top: 250px;
+	width: 40%;
+}
+
+/* texbox and buttons */	
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: stretch;
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 10px;
+	width: 100%;
+	left: 20;
+	right: 20;
+}
+
+/* links to the 1st area */
+#enter {
+	color: white;
+	text-decoration: none;
+	width: 300px;
+	height: 15px;
+	display: grid;
+	margin: auto;
+	margin-bottom: 15px;
+	border: 3px solid white;
+	border-radius: 7px;
+	padding: 15px;
+	font-family: cursive;
+	font-size: 15px;
+	text-align: center;
+	background: lightcoral;
+	font-family: cursive;
+	box-shadow: 1px 0px inset black,
+				-1px 0px inset black,
+				0px 1px inset black,
+				0px -1px inset black,
+				.5px 0px 2px inset bisque,
+				-.5px 0px 2px inset bisque,
+				0px .5px 2px inset bisque,
+				0px -.5px 2px inset bisque,
+				0px -15px 20px inset sandybrown,
+				0px -20px 1px inset crimson;
+}
+
+#enter:hover {
+	background: lightsalmon;
+	box-shadow: 1px 0px inset black,
+				-1px 0px inset black,
+				0px 1px inset black,
+				0px -1px inset black,
+				.5px 0px 2px inset bisque,
+				-.5px 0px 2px inset bisque,
+				0px .5px 2px inset bisque,
+				0px -.5px 2px inset bisque,
+				0px -10px 20px inset orange,
+				0px -15px 20px inset yellow,
+				0px -20px 1px inset crimson;
+}
+
+/* click to continue! */
+.continue {
+	width: 150px;
+	height: 30px;
+	margin-bottom: 5px;
+	border: 1px solid white;
+	border-radius: 7px;
+	padding-bottom: 2px;
+	font-family: cursive;
+	font-size: 15px;
+	text-align: center;
+	background: cornflowerblue;
+	color: white;
+	font-size: 15px;
+	font-family: cursive;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset cyan,
+				-.5px 0px 2px inset cyan,
+				0px .5px 2px inset cyan,
+				0px -.5px 2px inset cyan,
+				0px -10px 15px inset dodgerblue,
+				0px -10px 1px inset midnightblue;
+}
+
+.continue:hover {
+	cursor: pointer;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset aquamarine,
+				-.5px 0px 2px inset aquamarine,
+				0px .5px 2px inset aquamarine,
+				0px -.5px 2px inset aquamarine,
+				0px -10px 15px inset cyan,
+				0px -10px 1px inset midnightblue;
+}
+
+.continue:active {
+	cursor: pointer;
+	box-shadow: .5px 0px inset white,
+				-.5px 0px inset white,
+				0px .5px inset white,
+				0px -.5px inset white,
+				.5px 0px 2px inset aquamarine,
+				-.5px 0px 2px inset aquamarine,
+				0px .5px 2px inset aquamarine,
+				0px -.5px 2px inset aquamarine,
+				0px -10px 15px inset cyan,
+				0px -10px 1px inset midnightblue,
+				0px 0px 7px lightblue;
+}
+
+
+/* hides the current "click to continue" button so that the next one can appear */
+.continue:disabled {
+	display: none;
+}
+	
+
+.textbox {
+	color: white;
+	background: rgba(10, 40, 70, 0.8);
+	border: 3px solid white;
+	border-radius: 7px;
+	padding: 15px;
+	font-family: cursive;
+	font-size: 17px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 100px;
+	width: 700px;
+	margin: auto;
+	box-shadow: 2px 0px inset black,
+				-2px 0px inset black,
+				0px 2px inset black,
+				0px -2px inset black,
+				1px 0px 2px inset deepskyblue,
+				-1px 0px 2px inset deepskyblue,
+				0px 1px 2px inset deepskyblue,
+				0px -1px 2px inset deepskyblue,
+				0px -30px 40px inset royalblue,
+				0px -50px 1px inset black;
+}

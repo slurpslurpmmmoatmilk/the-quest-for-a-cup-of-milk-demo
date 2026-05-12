@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="menu.css" media="screen">
+	<title> The Quest for a Cup of Milk </title>
+	<link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body class="menu">
+<script src="menu.js"></script>
+<div class="main" id="main">
+
+<!-- title card -->
+<img src="menu-title.png" style="width:500px" class="title">
+<img src="pillah-idle.gif" style="width:230px" class= "pillah">
+
+<!-- boop -->
+<button id="start" onclick="start()" class="buttons">start</button>
+<button id="options" onclick="options()" class="buttons">options</button>
+<button id="credits" onclick="credits()" class="buttons">credits</button>
+<button id="mystery" onclick="mystery()" class="buttons">mystery button :)</button>
+
+</div>
+
+
+<!-- boxes that appear after pressing buttons -->
+<div id ="startwindow" class="windows" style="display:none" draggable="true">
+	<div id ="starttopbar" class="topbar"> <p class="file"> C:\Users\Wigglems\Desktop\start.exe </p>
+		<button id="closestart" onclick="closestart()" class="close" style="font-weight:900">x</button>
+	</div>
+	<p>This will start a new game!</p>
+	<p>This might change your life...</p>
+	<p>Are you ready?</p>
+	<div class="commence-buttons">
+	<button id="commence1" style="display:grid" onclick="commence()" class="commence">
+	<a href="intro.html"> yes </a>
+	</button>
+	<button id="commence2" style="display:grid" onclick="commence()" class="commence">
+	<a href="intro.html"> definitely </a>
+	</button>
+	</div>
+</div>
+
+<div id ="optionswindow" class="windows" style="display:none">
+	<div id ="optionstopbar" class="topbar" style="width700px"> <p class="file"> C:\Users\Wigglems\Desktop\options.txt </p>
+		<button id="closeoptions" onclick="closeoptions()" class="close" style="font-weight:900">x</button>
+	</div>
+	<p>Options?</p>
+	<p>You'll get plenty of those later, don't you worry.</p>
+	<p>It's kind of the point of this game.</p>
+</div>
+
+<div id ="creditswindow" class="windows" style="display:none">
+	<div id ="creditstopbar" class="topbar" style="width700px"> <p class="file"> C:\Users\Wigglems\Desktop\credits.txt </p>
+		<button id="closecredits" onclick="closecredits()" class="close" style="font-weight:900">x</button>
+	</div>
+	<p>Art: Fennel</p>
+	<p>Graphics: Fennel</p>
+	<p>Animations: Fennel</p>
+	<p>Emotional support: Gary (dog)</p>
+	<p>Emotional anguish: Gary (dog)</p>
+	<p>Milk supplier: Earth's Own</p>
+	<p>Typeface: Comic Sans MS</p>
+</div>
+
+<div id ="mysterywindow" class="windows" style="display:none">
+	<div id ="mysterytopbar" class="topbar" style="width700px"> <p class="file"> C:\Users\Wigglems\Desktop\mystery.gif </p>
+		<button id="closemystery" onclick="closemystery()" class="close" style="font-weight:900">x</button>
+	</div>
+	<p>a second mystery button??</p>
+	<button id="funky" style="display:grid" onclick="funky()" class="commence">
+	<a href="https://www.youtube.com/watch?v=QX43QTYyV-8"> ooo click me </a>
+	</button>
+</div>
+
+
+	<script>
+		function start() { 
+			document.getElementById("main").style.display = "none";
+			document.getElementById("startwindow").style.display = "grid";
+		}
+		</script>
+		
+	<script>
+		function closestart() { 
+			document.getElementById("main").style.display = "grid";
+			document.getElementById("startwindow").style.display = "none";
+		}
+	</script>
+	
+	
+	<script>
+		function options() { 
+			document.getElementById("main").style.display = "none";
+			document.getElementById("optionswindow").style.display = "grid";
+		}
+		</script>
+		
+	<script>
+		function closeoptions() { 
+			document.getElementById("main").style.display = "grid";
+			document.getElementById("optionswindow").style.display = "none";
+		}
+	</script>
+	
+	
+	<script>
+		function credits() { 
+			document.getElementById("main").style.display = "none";
+			document.getElementById("creditswindow").style.display = "grid";
+		}
+		</script>
+		
+	<script>
+		function closecredits() { 
+			document.getElementById("main").style.display = "grid";
+			document.getElementById("creditswindow").style.display = "none";
+		}
+	</script>
+	
+	
+	<script>
+		function mystery() { 
+			document.getElementById("main").style.display = "none";
+			document.getElementById("mysterywindow").style.display = "grid";
+		}
+		</script>
+		
+	<script>
+		function closemystery() { 
+			document.getElementById("main").style.display = "grid";
+			document.getElementById("mysterywindow").style.display = "none";
+		}
+	</script>
+
+</body>
+</html>
